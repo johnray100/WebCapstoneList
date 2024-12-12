@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <title>Accounting Management System</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="../assets/css/plugins/dataTables.bootstrap.min.css" type="text/css"/>
+      <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+      <link rel="stylesheet" href="../assets/css/app.css" type="text/css" />
+   </head>
+   <body class="theme-blue">
+      <div class="main-wrapper">
+         <!--header start-->
+         <div class="header-blue header">
+            <div class="header-left">
+               <a href="index.html"><img src="../assets/img/logo.png">
+               </a>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);">
+            <span class="bar-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            </span>
+            </a>
+            <a href="#nav" class="mobile_btn pull-left" id="mobile_btn"><i aria-hidden="true" class="fa fa-bars"></i></a>
+            <ul class="nav navbar-nav navbar-right nav-user pull-right">
+               <li class="dropdown main-drop">
+                  <a href="#" class="dropdown-toggle user-link" data-toggle="dropdown">
+                  <span class="user-img"><img src="../assets/img/avatar.png" class="img-circle" width="40"></span>
+                  <span>Admin</span>
+                  <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#">Settings</a></li>
+                     <li> <a href="../index.html" >Log Out</a> </li>
+                  </ul>
+               </li>
+            </ul>
+            <div class="dropdown mobile-user-menu pull-right">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+               <ul class="dropdown-menu pull-right">
+                  <li><a href="http://l9tslhne-site.itempurl.com/longtailerp/profile/settings">Settings</a></li>
+                  <li>
+                     <a id="user-activities" href="http://l9tslhne-site.itempurl.com/longtailerp/profile/activities">
+                     <span class="badge bg-success pull-right">0</span>
+                     Activity Feed					</a>
+                  </li>
+                  <li> <a href="../index.html" >Log Out</a> </li>
+               </ul>
+            </div>
+         </div>
+         <div class="sidebar-light lter sidebar" id="nav">
+            <div class="slimscroll">
+               <div id="sidebar-menu" class="sidebar-menu">
+                  <ul class="nav">
+                     <li>
+                        <a href="index.html">
+                        <i class="fa fa-tachometer-alt"> <b class="bg-info"></b></i>
+                        <span>Dashboard</span>
+                        </a>
+                     </li>
+                     <li class="active">
+                        <a href="invoice.html">
+                        <i class="fa fa-file-invoice"> <b class="bg-info"></b></i>
+                        <span>Invoices</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="project.html">
+                        <i class="fa fa-project-diagram"> <b class="bg-info"></b></i>
+                        <span>Projects</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="expense-category.html">
+                        <i class="fa fa-search-dollar"> <b class="bg-info"></b></i>
+                        <span>Expense Category</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="expense.html">
+                        <i class="fa fa-file-invoice-dollar"> <b class="bg-info"></b></i>
+                        <span>Expense Record</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="items.html">
+                        <i class="fa fa-list"> <b class="bg-info"></b></i>
+                        <span>Items</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="payment.html">
+                        <i class="fa fa-money-bill"> <b class="bg-info"></b></i>
+                        <span>Payments</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="revenue-report.html">
+                        <i class="fa fa-funnel-dollar"> <b class="bg-info"></b></i>
+                        <span>Revenue Record</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="balance-sheet.html">
+                        <i class="fa fa-file-excel"> <b class="bg-info"></b></i>
+                        <span>Balance Sheet</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="database.html">
+                        <i class="fa fa-database"> <b class="bg-info"></b></i>
+                        <span>Database</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="user.html">
+                        <i class="fa fa-user"> <b class="bg-info"></b></i>
+                        <span>Users</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!--sidebar end-->
+         <div class="page-wrapper">
+            <!--main content start-->
+            <div class="content">
+               <div class="row">
+                  <div class="col-sm-4 col-xs-3">
+                     <h4 class="page-title">Invoices</h4>
+                  </div>
+                  <div class="col-sm-8 col-xs-9 text-right m-b-0">
+                     <a href="create-invoice.html" class="btn btn-primary rounded pull-right"><i class="fa fa-plus"></i> Create Invoice</a>
+                     <div class="btn-group pull-right m-r-10">
+                        <button class="btn btn-default">
+                        Filter By</button>
+                        <button class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                        <ul class="dropdown-menu">
+                           <li><a href="#">Paid</a></li>
+                           <li><a href="#">Not Paid</a></li>
+                           <li><a href="#">Partial</a></li>
+                           <li><a href="#">Recurring</a></li>
+                           <li><a href="#">All Invoices</a></li>
+                        </ul>
+                     </div>
+                  </div>
+               </div>
+               <div class="row filter-row">
+                  <div class="col-sm-3 col-xs-6">
+                     <div class="form-group form-focus focused">
+                        <label class="control-label">From</label>
+                        <div class="cal-icon">
+                           <input class="form-control floating" type="date">
+                        </div>
+                        <label id="invoice_date_from_error" class="error display-none" for="invoice_date_from">From Date Shouldn't be empty</label>
+                     </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">
+                    <div class="form-group form-focus focused">
+                       <label class="control-label">To</label>
+                       <div class="cal-icon">
+                          <input class="form-control floating" type="date">
+                       </div>
+                       <label id="invoice_date_from_error" class="error display-none" for="invoice_date_from">To Date Shouldn't be empty</label>
+                    </div>
+                 </div>
+                  <div class="col-sm-3 col-xs-6">
+                     <div class="form-group form-focus select-focus">
+                        <label class="control-label">Status</label>
+                        <select class="select floating form-control" id="invoices_status" name="invoices_status">
+                           <option value="" selected="selected">All Invoices</option>
+                           <option value="Fully">Paid</option>
+                           <option value="Not">Not Paid</option>
+                           <option value="Partial">Partial</option>
+                           <option value="Recurring">Recurring</option>
+                        </select>
+                        <label id="invoices_status_error" class="error display-none" for="invoices_status">Please Select a status</label>
+                     </div>
+                  </div>
+                  <div class="col-sm-3 col-xs-6">  
+                     <a href="javascript:void(0)" class="btn btn-success btn-block" id="tableinvoices_btn"> Search </a>  
+                  </div>
+               </div>
+               <div class="row">
+                  <div class="col-md-12">
+                     <div class="table-responsive">
+                        <table id="table-invoices" class="table custom-table m-b-0">
+                           <thead>
+                              <tr>
+                                 <th style="width:5px; display:none;"></th>
+                                 <th style="width:5px; display:none;"></th>
+                                 <th style="width:5px; display:none;"></th>
+                                 <th class="">Invoice</th>
+                                 <th class="">Company Name</th>
+                                 <th class="">Status</th>
+                                 <th class="col-date">Deadline</th>
+                                 <th class="col-currency">Amount</th>
+                                 <th class="col-currency">Due Amount</th>
+                                 <th class="text-right">Action</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr class="">
+                                 <td style="display:none;">86</td>
+                                 <td style="display:none;">04/06/2020</td>
+                                 <td style="display:none;">Fully</td>
+                                 <td>INV0051</td>
+                                 <td>
+                                    Future Expert					
+                                 </td>
+                                 <td>
+                                    <span class="label label-success">Fully Paid </span>
+                                 </td>
+                                 <td>06-04-2020</td>
+                                 <td class="col-currency">
+                                    Php 500.00					
+                                 </td>
+                                 <td class="col-currency">
+                                    Php 10.00					
+                                 </td>
+                                 <td class="text-right">
+                                    <div class="dropdown">
+                                       <a data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="fa fa-ellipsis-v"></i></a>
+                                       <ul class="dropdown-menu pull-right">
+                                          <li>
+                                             <a href="view-invoice.html">
+                                             Preview Invoice									</a>
+                                          </li>
+                                          <li>
+                                             <a href="#">
+                                             Edit Invoice									</a>
+                                          </li>
+                                          <li>
+                                             <a data-invid="88" data-target="#delete" data-toggle="modal">
+                                             	Delete Invoice
+                                             </a>
+                                             </li> 
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="">
+                                 <td style="display:none;">85</td>
+                                 <td style="display:none;">04/04/2020</td>
+                                 <td style="display:none;">Not</td>
+                                 <td>INV0050</td>
+                                 <td>
+                                    Platovon Consulting Limited					
+                                 </td>
+                                 <td>
+                                    <span class="label label-danger">Not Paid </span>
+                                 </td>
+                                 <td>04-04-2020</td>
+                                 <td class="col-currency">
+                                    Php 400.00					
+                                 </td>
+                                 <td class="col-currency">
+                                 Php 200.00					
+                                 </td>
+                                 <td class="text-right">
+                                    <div class="dropdown">
+                                       <a data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="fa fa-ellipsis-v"></i></a>
+                                       <ul class="dropdown-menu pull-right">
+                                          <li>
+                                             <a href="view-invoice.html">
+                                             Preview Invoice									</a>
+                                          </li>
+                                          <li>
+                                             <a href="#">
+                                             Edit Invoice									</a>
+                                          </li>
+                                          <li>
+                                             <a data-invid="88" data-target="#delete" data-toggle="modal">
+                                             	Delete Invoice
+                                             </a>
+                                             </li> 
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr class="">
+                                 <td style="display:none;">78</td>
+                                 <td style="display:none;">03/11/2020</td>
+                                 <td style="display:none;">Partially</td>
+                                 <td>INV0049</td>
+                                 <td>
+                                    Queen Technologies					
+                                 </td>
+                                 <td>
+                                    <span class="label label-warning">Partial </span>
+                                 </td>
+                                 <td>11-03-2020</td>
+                                 <td class="col-currency">
+                                    Php 575.00					
+                                 </td>
+                                 <td class="col-currency">
+                                    Php 130.00					
+                                 </td>
+                                 <td class="text-right">
+                                    <div class="dropdown">
+                                       <a data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="fa fa-ellipsis-v"></i></a>
+                                       <ul class="dropdown-menu pull-right">
+                                          <li>
+                                             <a href="view-invoice.html">
+                                             Preview Invoice									</a>
+                                          </li>
+                                          <li>
+                                             <a href="#">
+                                             Edit Invoice									</a>
+                                          </li>
+                                          <li>
+                                             <a data-invid="88" data-target="#delete" data-toggle="modal">
+                                             	Delete Invoice
+                                             </a>
+                                             </li> 
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+               <div class="modal-dialog">
+                  <div class="modal-content">
+                     <div class="modal-header">
+                        <h4 class="modal-title" id="myModalLabel">Delete Invoice</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                     </div>
+                     <div class="modal-body">
+                        <h5>Do you want delete this Invoice?</h5>
+                     </div>
+                     <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                        <button class="btn btn-danger clone_invoice_btn" data-invoice="88">Yes</button>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <!--main content end-->
+         </div>
+      </div>
+      
+      <script src="../assets/js/jquery-3.2.1.min.js"></script>	
+      <script src="../assets/js/jquery-ui.min.js"></script>
+      <script src="../assets/js/bootstrap.min.js"></script>
+      <script src="../assets/js/app.js"></script>
+      <script src="../assets/js/jquery.maskMoney.min.js"></script>
+   </body>
+</html>

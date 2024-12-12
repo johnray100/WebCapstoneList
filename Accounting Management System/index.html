@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="utf-8">
+      <title>Accounting Management System</title>
+      <link rel="stylesheet" href="assets/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="assets/css/plugins/dataTables.bootstrap.min.css" type="text/css"/>
+      <link rel="stylesheet" href="assets/css/style.css" type="text/css" />
+      <link rel="stylesheet" href="assets/css/app.css" type="text/css" />
+      <style type="text/css">
+         body { font-family: 'Roboto'; }
+      </style>
+   </head>
+   <body class="theme-blue account-page">
+      <div class="main-wrapper">
+         <!--main content start-->
+         <div class="account-content">
+            <div id="login-form" class="container">
+               <div class="account-box">
+                  <!-- Account Logo -->
+                  <div class="account-logo">
+                     <img src="assets/img/logo.png" class="login-logo">
+                  </div>
+                  <!-- /Account Logo -->
+                  <div class="langage-menu2 text-right clearfix">
+                     <div class="form-group">
+                        <label >Users:</label>
+                        <select class="form-control" id="login_user_type">
+                           <option selected disabled>Choose</option>
+                           <option value="admin">Admin</option>
+                           <option value="client">Client</option>
+                           <option value="user">Employee</option>
+                        </select>
+                     </div>
+                  </div>
+                  <!-- Account Form -->
+                  <form action="admin" class="" method="post" accept-charset="utf-8">
+                     <div class="form-group">
+                        <label class="control-label">Email or Username</label>
+                        <input type="text" name="login" value="" class="form-control UserTypeName" maxlength="80" size="30"  />
+                        <span class="error"></span>
+                     </div>
+                     <div class="form-group">
+                        <label class="control-label">Password</label>
+                        <input type="password" name="password" value=""  size="30" class="form-control UserTypePassword"  />
+                        <span class="error"></span>
+                     </div>
+                     <table>
+                     </table>
+                     <div class="form-group clearfix">
+                        <div class="pull-left">
+                           <label>
+                           <input type="checkbox" name="remember" value="1" id="remember"  />
+                           Keep me logged in.						</label>
+                        </div>
+                        <a href="#" class="pull-right text-muted">Forgot password?</a>
+                     </div>
+                     <div class="form-group">
+                        <button type="submit" class="btn account-btn">Sign in</button>
+                     </div>
+                  </form>
+                  <!-- /Account Form -->
+               </div>
+            </div>
+         </div>
+         <!--main content end-->
+      </div>
+      <script src="assets/js/jquery-3.2.1.min.js"></script>	
+      <script src="assets/js/bootstrap.min.js"></script>
+      <script src="assets/js/app.js"></script>
+   </body>
+</html>

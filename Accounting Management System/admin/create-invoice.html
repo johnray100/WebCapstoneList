@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <title>Accounting Management System</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="../assets/css/plugins/dataTables.bootstrap.min.css" type="text/css"/>
+      <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+      <link rel="stylesheet" href="../assets/css/app.css" type="text/css" />
+   </head>
+   <body class="theme-blue">
+      <div class="main-wrapper">
+         <!--header start-->
+         <div class="header-blue header">
+            <div class="header-left">
+               <a href="index.html"><img src="../assets/img/logo.png">
+               </a>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);">
+            <span class="bar-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            </span>
+            </a>
+            <a href="#nav" class="mobile_btn pull-left" id="mobile_btn"><i aria-hidden="true" class="fa fa-bars"></i></a>
+            <ul class="nav navbar-nav navbar-right nav-user pull-right">
+               <li class="dropdown main-drop">
+                  <a href="#" class="dropdown-toggle user-link" data-toggle="dropdown">
+                  <span class="user-img"><img src="../assets/img/avatar.png" class="img-circle" width="40"></span>
+                  <span>Admin</span>
+                  <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#">Settings</a></li>
+                     <li> <a href="../index.html" >Log Out</a> </li>
+                  </ul>
+               </li>
+            </ul>
+            <div class="dropdown mobile-user-menu pull-right">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+               <ul class="dropdown-menu pull-right">
+                  <li><a href="http://l9tslhne-site.itempurl.com/longtailerp/profile/settings">Settings</a></li>
+                  <li>
+                     <a id="user-activities" href="http://l9tslhne-site.itempurl.com/longtailerp/profile/activities">
+                     <span class="badge bg-success pull-right">0</span>
+                     Activity Feed					</a>
+                  </li>
+                  <li> <a href="../index.html" >Log Out</a> </li>
+               </ul>
+            </div>
+         </div>
+         <div class="sidebar-light lter sidebar" id="nav">
+            <div class="slimscroll">
+               <div id="sidebar-menu" class="sidebar-menu">
+                  <ul class="nav">
+                     <li>
+                        <a href="index.html">
+                        <i class="fa fa-tachometer-alt"> <b class="bg-info"></b></i>
+                        <span>Dashboard</span>
+                        </a>
+                     </li>
+                     <li class="active">
+                        <a href="invoice.html">
+                        <i class="fa fa-file-invoice"> <b class="bg-info"></b></i>
+                        <span>Invoices</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="project.html">
+                        <i class="fa fa-project-diagram"> <b class="bg-info"></b></i>
+                        <span>Projects</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="expense-category.html">
+                        <i class="fa fa-search-dollar"> <b class="bg-info"></b></i>
+                        <span>Expense Category</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="expense.html">
+                        <i class="fa fa-file-invoice-dollar"> <b class="bg-info"></b></i>
+                        <span>Expense Record</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="payment.html">
+                        <i class="fa fa-money-bill"> <b class="bg-info"></b></i>
+                        <span>Payments</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="revenue-report.html">
+                        <i class="fa fa-funnel-dollar"> <b class="bg-info"></b></i>
+                        <span>Revenue Record</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="balance-sheet.html">
+                        <i class="fa fa-file-excel"> <b class="bg-info"></b></i>
+                        <span>Balance Sheet</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="database.html">
+                        <i class="fa fa-database"> <b class="bg-info"></b></i>
+                        <span>Database</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="user.html">
+                        <i class="fa fa-user"> <b class="bg-info"></b></i>
+                        <span>Users</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!--sidebar end-->
+         <div class="page-wrapper">
+            <!--main content start-->
+            <div class="content">
+               <div class="row">
+                  <div class="col-xs-12">
+                     <h3 class="page-title">Create Invoice</h3>
+                  </div>
+               </div>
+               <!-- Start create invoice -->
+               <div class="row">
+                  <div class="col-sm-12">
+                     <div class="panel panel-white m-b-0">
+                        <div class="panel-body">
+                           <form action="" class="bs-example form-horizontal" id="createInvoiceForm" method="post" accept-charset="utf-8">
+                              <div class="form-group">
+                                 <label class="col-lg-3 control-label">Ref No <span class="text-danger">*</span></label>
+                                 <div class="col-lg-6">
+                                    <input type="text" class="form-control" readonly value="INV0054" name="reference_no">
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-lg-3 control-label">Company <span class="text-danger">*</span> </label>
+                                 <div class="col-lg-6">
+                                    <select class="select2-option form-control" style="width:100%" name="client" >
+                                       <optgroup label="Company">
+                                          <option value="29">Future Expert</option>
+                                          <option value="62">Infinity</option>
+                                          <option value="20">Platovon Consulting Limited</option>
+                                          <option value="21">Queen Technologies</option>
+                                          <option value="61">Testclient1003</option>
+                                          <option value="13">Wipro private limits </option>
+                                       </optgroup>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-lg-3 control-label">Deadline <span class="text-danger">*</span></label>
+                                 <div class="col-lg-6">
+                                    <input class="datepicker-input form-control" type="text" readonly value="30-06-2021" name="due_date" data-date-format="dd-mm-yyyy" >
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-lg-3 control-label">CGST</label>
+                                 <div class="col-lg-6">
+                                    <div class="input-group">
+                                       <span class="input-group-addon">%</span>
+                                       <input class="form-control money" type="text" value="12" name="tax" id="invoice_create_tax1">
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <label id="create_invoice_tax1_error" class="error display-none" style="position:inherit;top:0;font-size: 15px;" for="tax">Entered Tax is invalid</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-lg-3 control-label">GST</label>
+                                 <div class="col-lg-6">
+                                    <div class="input-group">
+                                       <span class="input-group-addon">%</span>
+                                       <input class="form-control money" type="text" value="10" name="tax2" id="invoice_create_tax2">
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <label id="create_invoice_tax2_error" class="error display-none" style="position:inherit;top:0;font-size: 15px;" for="tax2">Entered Tax is invalid</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-lg-3 control-label">Discount</label>
+                                 <div class="col-lg-6">
+                                    <div class="input-group">
+                                       <span class="input-group-addon">%</span>
+                                       <input class="form-control money" type="text" value="" name="discount" id="invoice_create_discount">
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <label id="create_invoice_discount_error" class="error display-none" style="position:inherit;top:0;font-size: 15px;" for="notes">Entered discount is invalid</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-lg-3 control-label">Extra Fee</label>
+                                 <div class="col-lg-6">
+                                    <div class="input-group">
+                                       <span class="input-group-addon">%</span>
+                                       <input class="form-control money" type="text" value="" name="extra_fee" id="invoice_create_extrafee">
+                                    </div>
+                                    <div class="row">
+                                       <div class="col-md-12">
+                                          <label id="create_invoice_fee_error" class="error display-none" style="position:inherit;top:0;font-size: 15px;" for="notes">Entered fee is invalid</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-lg-3 control-label">Currency</label>
+                                 <div class="col-lg-6">
+                                    <select name="currency" class="form-control">
+                                       <!-- <option value="">Client Default Currency</option> -->
+                                       <option value="">Company Default Currency</option>
+                                       <option value="AUD">Australian Dollar</option>
+                                       <option value="VEF">Bolívar Fuerte</option>
+                                       <option value="BRL">Brazilian Real</option>
+                                       <option value="GBP">British Pound</option>
+                                       <option value="CAD">Canadian Dollar</option>
+                                       <option value="CLP">Chilean Peso</option>
+                                       <option value="CNY">Chinese Yuan</option>
+                                       <option value="CZK">Czech Koruna</option>
+                                       <option value="DKK">Danish Krone</option>
+                                       <option value="EUR">Euro</option>
+                                       <option value="HKD">Hong Kong Dollar</option>
+                                       <option value="HUF">Hungarian Forint</option>
+                                       <option value="INR">Indian Rupee</option>
+                                       <option value="IDR">Indonesian Rupiah</option>
+                                       <option value="ILS">Israeli New Shekel</option>
+                                       <option value="JPY">Japanese Yen</option>
+                                       <option value="KES">Kenya shillings</option>
+                                       <option value="KRW">Korean Won</option>
+                                       <option value="MYR">Malaysian Ringgit</option>
+                                       <option value="MXN">Mexican Peso</option>
+                                       <option value="NZD">New Zealand Dollar</option>
+                                       <option value="NOK">Norwegian Krone</option>
+                                       <option value="PKR">Pakistan Rupee</option>
+                                       <option value="PHP">Philippine Peso</option>
+                                       <option value="PLN">Polish Zloty</option>
+                                       <option value="RUB">Russian Ruble</option>
+                                       <option value="SGD">Singapore Dollar</option>
+                                       <option value="ZAR">South African Rand</option>
+                                       <option value="SEK">Swedish Krona</option>
+                                       <option value="CHF">Swiss Franc</option>
+                                       <option value="TWD">Taiwan Dollar</option>
+                                       <option value="THB">Thai Baht</option>
+                                       <option value="TRY">Turkish Lira</option>
+                                       <option value="AED">United Arab Emirates Dirham</option>
+                                       <option value="USD">US Dollar</option>
+                                    </select>
+                                 </div>
+                              </div>
+                              <div class="form-group">
+                                 <label class="col-lg-3 control-label">Allow Stripe</label>
+                                 <div class="col-lg-4">
+                                    <label class="switch">
+                                    <input type="checkbox" name="allow_stripe">
+                                    <span></span>
+                                    </label>
+                                 </div>
+                              </div>
+                              <div class="form-group terms">
+                                 <label class="col-lg-3 control-label">Notes <span class="text-danger">*</span></label>
+                                 <div class="col-lg-9">
+                                    <textarea name="notes" class="form-control foeditor-invoice-create" ></textarea>
+                                    <div class="row">
+                                       <div class="col-md-6">
+                                          <label id="create_invoice_error" class="error display-none" style="position:inherit;top:0;font-size: 15px;" for="notes">Notes must not empty</label>
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="text-center">
+                                 <button type="submit" id="invoice_create_submit" class="btn btn-primary btn-lg"><i class="fa fa-plus"></i> Create Invoice</button>
+                              </div>
+                           </form>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+               <!-- End create invoice -->
+            </div>
+            <!--main content end-->
+         </div>
+      </div>
+      <script src="../assets/js/jquery-3.2.1.min.js"></script>	
+      <script src="../assets/js/jquery-ui.min.js"></script>
+      <script src="../assets/js/bootstrap.min.js"></script>
+      <script src="../assets/js/app.js"></script>
+      <script src="../assets/js/jquery.maskMoney.min.js"></script>
+   </body>
+</html>

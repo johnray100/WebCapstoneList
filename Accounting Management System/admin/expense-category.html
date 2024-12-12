@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <title>Accounting Management System</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="../assets/css/dataTables.bootstrap.min.css" type="text/css"/>
+      <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+      <link rel="stylesheet" href="../assets/css/app.css" type="text/css" />
+   </head>
+   <body class="theme-blue">
+      <div class="main-wrapper">
+         <!--header start-->
+         <div class="header-blue header">
+            <div class="header-left">
+               <a href="index.html"><img src="../assets/img/logo.png">
+               </a>
+            </div>
+            <a id="toggle_btn" href="javascript:void(0);">
+            <span class="bar-icon">
+            <span></span>
+            <span></span>
+            <span></span>
+            </span>
+            </a>
+            <a href="#nav" class="mobile_btn pull-left" id="mobile_btn"><i aria-hidden="true" class="fa fa-bars"></i></a>
+            <ul class="nav navbar-nav navbar-right nav-user pull-right">
+               <li class="dropdown main-drop">
+                  <a href="#" class="dropdown-toggle user-link" data-toggle="dropdown">
+                  <span class="user-img"><img src="../assets/img/avatar.png" class="img-circle" width="40"></span>
+                  <span>Admin</span>
+                  <b class="caret"></b>
+                  </a>
+                  <ul class="dropdown-menu">
+                     <li><a href="#">Settings</a></li>
+                     <li> <a href="../index.html" >Log Out</a> </li>
+                  </ul>
+               </li>
+            </ul>
+            <div class="dropdown mobile-user-menu pull-right">
+               <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+               <ul class="dropdown-menu pull-right">
+                  <li><a href="http://l9tslhne-site.itempurl.com/longtailerp/profile/settings">Settings</a></li>
+                  <li>
+                     <a id="user-activities" href="http://l9tslhne-site.itempurl.com/longtailerp/profile/activities">
+                     <span class="badge bg-success pull-right">0</span>
+                     Activity Feed					</a>
+                  </li>
+                  <li> <a href="../index.html" >Log Out</a> </li>
+               </ul>
+            </div>
+         </div>
+         <div class="sidebar-light lter sidebar" id="nav">
+            <div class="slimscroll">
+               <div id="sidebar-menu" class="sidebar-menu">
+                  <ul class="nav">
+                     <li>
+                        <a href="index.html">
+                        <i class="fa fa-tachometer-alt"> <b class="bg-info"></b></i>
+                        <span>Dashboard</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="invoice.html">
+                        <i class="fa fa-file-invoice"> <b class="bg-info"></b></i>
+                        <span>Invoices</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="project.html">
+                        <i class="fa fa-project-diagram"> <b class="bg-info"></b></i>
+                        <span>Projects</span>
+                        </a>
+                     </li>
+                     <li class="active">
+                        <a href="expense-category.html">
+                        <i class="fa fa-search-dollar"> <b class="bg-info"></b></i>
+                        <span>Expense Category</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="expense.html">
+                        <i class="fa fa-file-invoice-dollar"> <b class="bg-info"></b></i>
+                        <span>Expense Record</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="items.html">
+                        <i class="fa fa-list"> <b class="bg-info"></b></i>
+                        <span>Items</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="payment.html">
+                        <i class="fa fa-money-bill"> <b class="bg-info"></b></i>
+                        <span>Payments</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="revenue-report.html">
+                        <i class="fa fa-funnel-dollar"> <b class="bg-info"></b></i>
+                        <span>Revenue Record</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="balance-sheet.html">
+                        <i class="fa fa-file-excel"> <b class="bg-info"></b></i>
+                        <span>Balance Sheet</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="database.html">
+                        <i class="fa fa-database"> <b class="bg-info"></b></i>
+                        <span>Database</span>
+                        </a>
+                     </li>
+                     <li>
+                        <a href="user.html">
+                        <i class="fa fa-user"> <b class="bg-info"></b></i>
+                        <span>Users</span>
+                        </a>
+                     </li>
+                  </ul>
+               </div>
+            </div>
+         </div>
+         <!--sidebar end-->
+         <div class="page-wrapper">
+            <!--main content start-->
+            <div class="content">
+               <div class="row">
+                  <div class="col-sm-8">
+                     <h4 class="page-title">Categories</h4>
+                  </div>
+                  <div class="col-sm-4 text-right m-b-20">
+                     <a class="btn add-btn" href="#" data-target="#add" data-toggle="modal"><i class="fa fa-plus"></i> Add Category</a>
+                  </div>
+               </div>
+               <div class="row">
+                  <!-- Project Tasks -->
+                  <div class="col-lg-12">
+                     <div class="table-responsive">
+                        <table id="myTable" class="table custom-table m-b-0 AppendDataTables">
+                           <thead>
+                              <tr>
+                                 <th>#</th>
+                                 <th>Category Name</th>
+                                 <th>Description</th>
+                                 <th class="col-options no-sort text-right">Action</th>
+                              </tr>
+                           </thead>
+                           <tbody>
+                              <tr>
+                                 <td>1</td>
+                                 <td>Category 1</td>
+                                 <td>
+                                    <div>-</div>
+                                 </td>
+                                 <td class="text-right">
+                                    <div class="dropdown">
+                                       <a data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="fa fa-ellipsis-v"></i></a>
+                                       <ul class="dropdown-menu pull-right">
+                                          <li><a href="#" data-target="#edit" data-toggle="modal">Edit Category</a>
+                                          </li>
+                                          <li><a href="#" data-target="#delete" data-toggle="modal">Delete Category</a>
+                                             </li> 
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>1</td>
+                                 <td>Category 2</td>
+                                 <td>
+                                    <div>-</div>
+                                 </td>
+                                 <td class="text-right">
+                                    <div class="dropdown">
+                                       <a data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="fa fa-ellipsis-v"></i></a>
+                                       <ul class="dropdown-menu pull-right">
+                                          <li><a href="#" data-target="#edit" data-toggle="modal">Edit Category</a>
+                                          </li>
+                                          <li><a href="#" data-target="#delete" data-toggle="modal">Delete Category</a>
+                                             </li> 
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                              <tr>
+                                 <td>1</td>
+                                 <td>Category 3</td>
+                                 <td>
+                                    <div>-</div>
+                                 </td>
+                                 <td class="text-right">
+                                    <div class="dropdown">
+                                       <a data-toggle="dropdown" class="action-icon dropdown-toggle" href="#"><i class="fa fa-ellipsis-v"></i></a>
+                                       <ul class="dropdown-menu pull-right">
+                                          <li><a href="#" data-target="#edit" data-toggle="modal">Edit Category</a>
+                                          </li>
+                                          <li><a href="#" data-target="#delete" data-toggle="modal">Delete Category</a>
+                                             </li> 
+                                       </ul>
+                                    </div>
+                                 </td>
+                              </tr>
+                           </tbody>
+                        </table>
+                     </div>
+                  </div>
+                  <!-- End Project Tasks -->
+               </div>
+            </div>
+            
+            <div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+                <div class="modal-dialog">
+                   <div class="modal-content">
+                      <div class="modal-header">
+                         <h4 class="modal-title" id="myModalLabel">Delete Category</h4>
+                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                         <span aria-hidden="true">&times;</span>
+                         </button>
+                      </div>
+                      <div class="modal-body">
+                         <h5>Do you want delete this Category?</h5>
+                      </div>
+                      <div class="modal-footer">
+                         <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+                         <button class="btn btn-danger clone_invoice_btn" data-invoice="88">Yes</button>
+                      </div>
+                   </div>
+                </div>
+             </div>
+             <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">        
+                 <div class="modal-dialog">
+                     <div class="modal-content">
+                         <div class="modal-header">
+                             <h4 class="modal-title">Update Category</h4>
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+                         <form action="" class="bs-example" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                             <div class="modal-body">
+                                 <div class="form-group">
+                                     <label>Category Name <span class="text-danger">*</span></label>
+                                     <input type="text" name="category_name" class="form-control" required>
+                                 </div>
+                                 <div class="form-group">
+                                     <label>Description <span class="text-danger">*</span></label>
+                                     <input type="text" name="category_name" class="form-control" required>
+                                 </div>
+                                 <div class="submit-section">
+                                     <button class="btn btn-primary submit-btn">Save Changes</button>
+                                 </div>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+             <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">        
+                 <div class="modal-dialog">
+                     <div class="modal-content">
+                         <div class="modal-header">
+                             <h4 class="modal-title">Add Category</h4>
+                             <button type="button" class="close" data-dismiss="modal">&times;</button>
+                         </div>
+                         <form action="" class="bs-example" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+                             <div class="modal-body">
+                                 <div class="form-group">
+                                     <label>Category Name <span class="text-danger">*</span></label>
+                                     <input type="text" name="category_name" class="form-control" required>
+                                 </div>
+                                 <div class="form-group">
+                                     <label>Description <span class="text-danger">*</span></label>
+                                     <input type="text" name="category_name" class="form-control" required>
+                                 </div>
+                                 <div class="submit-section">
+                                     <button class="btn btn-primary submit-btn">Submit</button>
+                                 </div>
+                             </div>
+                         </form>
+                     </div>
+                 </div>
+             </div>
+            <!--main content end-->
+         </div>
+      </div>
+      <script src="../assets/js/jquery-3.2.1.min.js"></script>	
+      <script src="../assets/js/jquery-ui.min.js"></script>
+      <script src="../assets/js/bootstrap.min.js"></script>
+      <script src="../assets/js/app.js"></script>
+      <script src="../assets/js/jquery.maskMoney.min.js"></script>
+      <script src="../assets/js/jquery.dataTables.min.js"></script>
+      <script src="../assets/js/dataTables.bootstrap.min.js"></script>
+
+<script>
+   $(function () {
+      $("#myTable").DataTable();
+   });
+</script>
+   </body>
+</html>

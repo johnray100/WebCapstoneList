@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	
+	<meta charset="utf-8">
+	<meta name="keyword" content="">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Capstone Management System</title>
+ 
+    <!-- start: Css -->
+    <link rel="stylesheet" type="text/css" href="../asset/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="../asset/css/animate.min.css">
+
+      <!-- plugins -->
+      <link rel="stylesheet" type="text/css" href="../asset/linearicons/icons.css"/>
+  <link rel="stylesheet" type="text/css" href="../asset/css/plugins/datatables.bootstrap.min.css"/>
+      <link rel="stylesheet" type="text/css" href="../asset/css/plugins/simple-line-icons.css"/>
+	    <link href="../asset/css/style.css" rel="stylesheet">
+	<!-- end: Css -->
+  </head>
+
+ <body id="mimin" class="dashboard">
+      <!-- start: Header -->
+        <nav class="navbar navbar-default header navbar-fixed-top" style="background-color: rgba(62,88,113);">
+          <div class="col-md-12 nav-wrapper">
+            <div class="navbar-header" style="width:100%;">
+              <div class="opener-left-menu is-open" style="background-color: rgba(44,62,80);">
+                <span class="top"></span>
+                <span class="middle"></span>
+                <span class="bottom"></span>
+              </div>
+                <a href="index.html" class="navbar-brand"> 
+                 <b>CPMS</b>
+                </a>
+
+              <ul class="nav navbar-nav navbar-right user-nav">
+                <li class="user-name"><span>Author</span></li>
+                  <li class="dropdown avatar-dropdown">
+                   <img src="../asset/img/avatar.jpg" class="img-circle avatar" alt="user name" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true"/>
+                   <ul class="dropdown-menu user-dropdown animated swing">
+                     <li><a href="#"><span class="lnr lnr-user"></span> My Profile</a></li>
+                     <li><a href="#"><span class="lnr lnr-cog"></span> Settings</a></li>
+                     <li role="separator" class="divider"></li>
+                     <li><a href="../index.html"><span class="lnr lnr-power-switch"></span> Logout</a></li>
+                  </ul>
+                </li>
+              </ul>    
+            </div>
+          </div>
+        </nav>
+      <!-- end: Header -->
+
+      <div class="container-fluid mimin-wrapper">
+  
+          <!-- start:Left Menu -->
+            <div id="left-menu">
+              <div class="sub-left-menu scroll" style="background-color: rgba(44,62,80);">
+                   <ul class="nav nav-list">
+                    <li class="time">
+                      <h1 class="animated fadeInLeft">21:00</h1>
+                      <p class="animated fadeInRight">Sat,June 1st 2021</p>
+                    </li>
+                    <li>
+                      <a href="index.html">
+                         <span class="lnr lnr-home"></span>Dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a href="milestones.html">
+                         <span class="lnr lnr-diamond"></span>Milestones
+                      </a>
+                    </li>
+                    <li class="active">
+                      <a href="project.html">
+                         <span class="lnr lnr-file-empty"></span>Projects
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+            </div>
+          <!-- end: Left Menu -->
+
+  		
+          <!-- start: content -->
+            <div id="content">
+
+                <div class="col-md-12" style="padding:20px;">
+                    <div class="col-md-12 padding-0">
+                        <div class="col-md-12 padding-0">
+                <div class="col-md-12 padding-0">
+                  <div class="panel box-shadow-none content-header">
+                      <div class="panel-body">
+                        <div class="col-md-12">
+                            <h3 class="animated fadeInLeft"><span class="lnr lnr-diamond"></span> Milestones List</h3>
+                        </div>
+                      </div>
+                  </div>
+                </div>
+                            <div class="col-md-12 padding-0">
+                                <div class="col-md-12">
+                                    <div class="panel box-v1 animated pulse">
+                                      <div class="panel-body">
+                                        <table id="datatables-example" class="table table-striped table-bordered" width="100%" cellspacing="0">
+                      <thead>
+                        <tr>
+                          <th>Milestone Code</th>
+                          <th>Upload Name</th>
+                          <th>File Uploaded</th>
+                          <th>Remarks</th>
+                          <th>Uploaded Date</th>
+                          <th>Status</th>
+                          <th class="text-right">Action</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        <tr>
+                          <td>MLSTN-123</td>
+                          <td>Test</td>
+                          <td>  Ordering system.zip</td>
+                          <td>Under development</td>
+                          <td>06-05-2021</td>
+                          <td><span class="badge bg-danger">pending</span></td>
+                          <td class="text-right">
+                                            <a class="btn btn-sm btn-info" href="#" data-toggle="modal"
+                                                        data-target="#upload"><i
+                                                            class="lnr lnr-paperclip"></i></a>
+                                            <a class="btn btn-sm btn-success" href="#"><i
+                                                            class="lnr lnr-pencil"></i></a>
+                                                    <a class="btn btn-sm btn-danger" href="#" data-toggle="modal"
+                                                        data-target="#delete"><i
+                                                            class="lnr lnr-trash"></i></a>
+                                        </td>
+                        </tr>
+                        <tr>
+                          <td>MLSTN-456</td>
+                          <td>Test</td>
+                          <td>Appoinment system.zip</td>
+                          <td>Done</td>
+                          <td>06-05-2021</td>
+                          <td><span class="badge bg-success">completed</span></td>
+                          <td class="text-right">
+                                            <a class="btn btn-sm btn-info" href="#" data-toggle="modal"
+                                                        data-target="#upload"><i
+                                                            class="lnr lnr-paperclip"></i></a>
+                                            <a class="btn btn-sm btn-success" href="#"><i
+                                                            class="lnr lnr-pencil"></i></a>
+                                                    <a class="btn btn-sm btn-danger" href="#" data-toggle="modal"
+                                                        data-target="#delete"><i
+                                                            class="lnr lnr-trash"></i></a>
+                                        </td>
+                        </tr>
+                      </tbody>
+                        </table>
+                                      </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+      		  </div>
+          <!-- end: content -->
+            </div>  
+          <!-- end: right menu -->
+          
+      </div>
+
+      <!-- start: Mobile -->
+      <div id="mimin-mobile" class="reverse">
+        <div class="mimin-mobile-menu-list">
+            <div class="col-md-12 sub-mimin-mobile-menu-list animated fadeInLeft">
+                 <ul class="nav nav-list">
+                    <li class="time">
+                      <h1 class="animated fadeInLeft">21:00</h1>
+                      <p class="animated fadeInRight">Sat,June 1st 2021</p>
+                    </li>
+                    <li class="active">
+                      <a href="index.html">
+                         <span class="lnr lnr-home"></span>Dashboard
+                      </a>
+                    </li>
+                    <li>
+                      <a href="milestones.html">
+                         <span class="lnr lnr-diamond"></span>Milestones
+                      </a>
+                    </li>
+                    <li>
+                      <a href="project.html">
+                         <span class="lnr lnr-file-empty"></span>Projects
+                      </a>
+                    </li>
+                  </ul>
+            </div>
+        </div>       
+      </div>
+      <button id="mimin-mobile-menu-opener" class="animated rubberBand btn btn-circle btn-danger">
+        <span class="fa fa-bars"></span>
+      </button>
+       <!-- end: Mobile -->
+            <div id="delete" class="modal animated rubberBand delete-modal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            <img src="../asset/img/sent.png" alt="" width="50" height="46">
+                            <h3>Are you sure want to delete this Project?</h3>
+                            <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Close</a>
+                                <button type="submit" class="btn btn-danger">Delete</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><div id="upload" class="modal animated rubberBand delete-modal" role="dialog">
+                <div class="modal-dialog modal-dialog-centered">
+                    <div class="modal-content">
+                        <div class="modal-body text-center">
+                            
+                    <div class="col-md-12 panel-body" style="padding-bottom:30px;">
+                      <div class="col-md-12">
+                        <form class="cmxform" id="signupForm" method="get" action="">
+                          <div class="col-md-6">
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" id="validate_firstname" name="validate_firstname" value="MLSTN-123" readonly="">
+                              <span class="bar"></span>
+                            </div>
+
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" id="validate_lastname" name="validate_lastname" required>
+                              <span class="bar"></span>
+                              <label>Upload Name</label>
+                            </div>
+                          </div>  
+                          <div class="col-md-6">
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="file" class="form-text" id="validate_firstname" name="validate_firstname" required>
+                              <span class="bar"></span>
+                            </div>
+
+                            <div class="form-group form-animate-text" style="margin-top:40px !important;">
+                              <input type="text" class="form-text" id="validate_lastname" name="validate_lastname" required>
+                              <span class="bar"></span>
+                              <label>Remarks</label>
+                            </div>
+                          </div> 
+                          <div class="col-md-12">
+                            <div class="form-group form-animate-text">
+                          <input type="date" class="form-text dateAnimate" required>
+                          <span class="bar"></span>
+                        </div>
+                          </div> 
+
+                    </div>
+                  </div>
+                            <div class="m-t-20"> <a href="#" class="btn btn-white" data-dismiss="modal">Cancel</a>
+                                <button type="submit" class="btn btn-info">Update</button>
+                            </div>
+                      </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    <!-- start: Javascript -->
+<script src="../asset/js/jquery.min.js"></script>
+<script src="../asset/js/jquery.ui.min.js"></script>
+<script src="../asset/js/bootstrap.min.js"></script>
+
+
+
+<!-- plugins -->
+<script src="../asset/js/plugins/moment.min.js"></script>
+<script src="../asset/js/plugins/jquery.datatables.min.js"></script>
+<script src="../asset/js/plugins/datatables.bootstrap.min.js"></script>
+<script src="../asset/js/plugins/jquery.nicescroll.js"></script>
+
+
+<!-- custom -->
+<script src="../asset/js/main.js"></script>
+<script type="text/javascript">
+  $(document).ready(function(){
+    $('#datatables-example').DataTable();
+  });
+</script>
+  </body>
+</html>

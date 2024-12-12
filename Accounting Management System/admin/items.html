@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en" class="app">
+   <head>
+      <meta charset="utf-8">
+      <meta name="description" content="">
+      <title>Accounting Management System</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <link rel="stylesheet" href="../assets/fontawesome/css/all.min.css">
+      <link rel="stylesheet" href="../assets/css/bootstrap.min.css" type="text/css">
+      <link rel="stylesheet" href="../assets/css/plugins/dataTables.bootstrap.min.css" type="text/css"/>
+      <link rel="stylesheet" href="../assets/css/style.css" type="text/css" />
+      <link rel="stylesheet" href="../assets/css/app.css" type="text/css" />
+   </head>
+   <body class="theme-blue">
+      <div class="main-wrapper">
+      <!--header start-->
+      <div class="header-blue header">
+         <div class="header-left">
+            <a href="index.html"><img src="../assets/img/logo.png">
+            </a>
+         </div>
+         <a id="toggle_btn" href="javascript:void(0);">
+         <span class="bar-icon">
+         <span></span>
+         <span></span>
+         <span></span>
+         </span>
+         </a>
+         <a href="#nav" class="mobile_btn pull-left" id="mobile_btn"><i aria-hidden="true" class="fa fa-bars"></i></a>
+         <ul class="nav navbar-nav navbar-right nav-user pull-right">
+            <li class="dropdown main-drop">
+               <a href="#" class="dropdown-toggle user-link" data-toggle="dropdown">
+               <span class="user-img"><img src="../assets/img/avatar.png" class="img-circle" width="40"></span>
+               <span>Admin</span>
+               <b class="caret"></b>
+               </a>
+               <ul class="dropdown-menu">
+                  <li><a href="#">Settings</a></li>
+                  <li> <a href="../index.html" >Log Out</a> </li>
+               </ul>
+            </li>
+         </ul>
+         <div class="dropdown mobile-user-menu pull-right">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-ellipsis-v"></i></a>
+            <ul class="dropdown-menu pull-right">
+               <li><a href="http://l9tslhne-site.itempurl.com/longtailerp/profile/settings">Settings</a></li>
+               <li>
+                  <a id="user-activities" href="http://l9tslhne-site.itempurl.com/longtailerp/profile/activities">
+                  <span class="badge bg-success pull-right">0</span>
+                  Activity Feed					</a>
+               </li>
+               <li> <a href="../index.html" >Log Out</a> </li>
+            </ul>
+         </div>
+      </div>
+      <div class="sidebar-light lter sidebar" id="nav">
+         <div class="slimscroll">
+            <div id="sidebar-menu" class="sidebar-menu">
+               <ul class="nav">
+                  <li>
+                     <a href="index.html">
+                     <i class="fa fa-tachometer-alt"> <b class="bg-info"></b></i>
+                     <span>Dashboard</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="invoice.html">
+                     <i class="fa fa-file-invoice"> <b class="bg-info"></b></i>
+                     <span>Invoices</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="project.html">
+                     <i class="fa fa-project-diagram"> <b class="bg-info"></b></i>
+                     <span>Projects</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="expense-category.html">
+                     <i class="fa fa-search-dollar"> <b class="bg-info"></b></i>
+                     <span>Expense Category</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="expense.html">
+                     <i class="fa fa-file-invoice-dollar"> <b class="bg-info"></b></i>
+                     <span>Expense Record</span>
+                     </a>
+                  </li>
+                  <li class="active">
+                     <a href="items.html">
+                     <i class="fa fa-list"> <b class="bg-info"></b></i>
+                     <span>Items</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="payment.html">
+                     <i class="fa fa-money-bill"> <b class="bg-info"></b></i>
+                     <span>Payments</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="revenue-report.html">
+                     <i class="fa fa-funnel-dollar"> <b class="bg-info"></b></i>
+                     <span>Revenue Record</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="balance-sheet.html">
+                     <i class="fa fa-file-excel"> <b class="bg-info"></b></i>
+                     <span>Balance Sheet</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="database.html">
+                     <i class="fa fa-database"> <b class="bg-info"></b></i>
+                     <span>Database</span>
+                     </a>
+                  </li>
+                  <li>
+                     <a href="user.html">
+                     <i class="fa fa-user"> <b class="bg-info"></b></i>
+                     <span>Users</span>
+                     </a>
+                  </li>
+               </ul>
+            </div>
+         </div>
+      </div>
+      <!--sidebar end-->
+
+			<div class="page-wrapper">
+
+				<!--main content start-->
+
+				<div class="content">
+	<div class="row">
+		<div class="col-xs-12">
+			<h4 class="page-title">Items</h4>
+		</div>
+	</div>
+	<div class="row row-eq-height">
+		<!-- Invoice Items -->
+		<div class="col-lg-12 row-eq-height">
+			<div class="panel panel-white panel-eq-dash">
+				<div class="panel-heading">
+					<div class="row">
+						<div class="col-xs-6">
+							<h3 class="panel-title m-l-10">Invoice Items </h3>
+						</div>
+						<div class="col-xs-6">
+							<a href="#" class="btn btn-xs btn-success pull-right m-r-10" data-target="#add" data-toggle="modal"><i class="fa fa-plus"></i> New Item</a>
+						</div>
+					</div>
+				</div>
+				<div class="panel-body">
+					<div class="table-responsive">
+						<table id="table-templates-2" class="table table-bordered AppendDataTables">
+							<thead>
+								<tr>
+									<th>Item Name</th>
+									<th>Unit Price </th>
+									<th>Qty </th>
+									<th class="col-options no-sort text-right">Action</th>
+								</tr>
+							</thead>
+							<tbody>
+																<tr>
+									<td>
+										<a class="text-muted" href="#" data-original-title="miscellaneous expenses " data-toggle="tooltip" data-placement="left" title = "">
+											miscellaneous expenses 										</a>
+									</td>
+									<td>Php 1.000,00</td>
+									<td>1.00</td>
+									<td class="text-right">
+										<a href="#" class="btn btn-success btn-xs" data-target="#edit" data-toggle="modal">
+											<i class="fa fa-edit"></i>
+										</a>
+										<a href="#" class="btn btn-danger btn-xs" data-target="#delete" data-toggle="modal">
+											<i class="fa fa-trash-alt"></i>
+										</a>
+									</td>
+								</tr>
+																<tr>
+									<td>
+										<a class="text-muted" href="#" data-original-title="food allowance" data-toggle="tooltip" data-placement="left" title = "">
+											Food allowance										</a>
+									</td>
+									<td>Php 250,00</td>
+									<td>1.00</td>
+									<td class="text-right">
+										<a href="#" class="btn btn-success btn-xs" data-target="#edit" data-toggle="modal">
+											<i class="fa fa-edit"></i>
+										</a>
+										<a href="#" class="btn btn-danger btn-xs" data-target="#delete" data-toggle="modal">
+											<i class="fa fa-trash-alt"></i>
+										</a>
+									</td>
+								</tr>
+																<tr>
+									<td>
+										<a class="text-muted" href="#" data-original-title="Travel allowance and cab expenses for the late night working" data-toggle="tooltip" data-placement="left" title = "">
+											Travel allowance										</a>
+									</td>
+									<td>Php 500,00</td>
+									<td>1.00</td>
+									<td class="text-right">
+										<a href="#" class="btn btn-success btn-xs" data-target="#edit" data-toggle="modal">
+											<i class="fa fa-edit"></i>
+										</a>
+										<a href="#" class="btn btn-danger btn-xs" data-target="#delete" data-toggle="modal">
+											<i class="fa fa-trash-alt"></i>
+										</a>
+									</td>
+								</tr>
+															</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- End Invoice Items -->
+	</div>
+</div>
+
+<div class="modal fade" id="delete" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">
+	<div class="modal-dialog">
+	   <div class="modal-content">
+		  <div class="modal-header">
+			 <h4 class="modal-title" id="myModalLabel">Delete Item</h4>
+			 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+			 <span aria-hidden="true">&times;</span>
+			 </button>
+		  </div>
+		  <div class="modal-body">
+			 <h5>Do you want delete this Item?</h5>
+		  </div>
+		  <div class="modal-footer">
+			 <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+			 <button class="btn btn-danger clone_invoice_btn" data-invoice="88">Yes</button>
+		  </div>
+	   </div>
+	</div>
+ </div>
+ <div class="modal fade" id="edit" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">        
+	 <div class="modal-dialog">
+		 <div class="modal-content">
+			 <div class="modal-header">
+				 <h4 class="modal-title">Update Item</h4>
+				 <button type="button" class="close" data-dismiss="modal">&times;</button>
+			 </div>
+			 <form action="" class="bs-example" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+				 <div class="modal-body">
+					 <div class="form-group">
+						 <label>Item Name <span class="text-danger">*</span></label>
+						 <input type="text" name="category_name" class="form-control" required>
+					 </div>
+					 <div class="form-group">
+						 <label>Unit Price <span class="text-danger">*</span></label>
+						 <input type="text" name="category_name" class="form-control" required>
+					 </div>
+					 <div class="form-group">
+						 <label>Quantity <span class="text-danger">*</span></label>
+						 <input type="text" name="category_name" class="form-control" required>
+					 </div>
+					 <div class="submit-section">
+						 <button class="btn btn-primary submit-btn">Save Changes</button>
+					 </div>
+				 </div>
+			 </form>
+		 </div>
+	 </div>
+ </div>
+ <div class="modal fade" id="add" tabindex="-1" role="dialog" aria-labelledby="basicModal" aria-hidden="true">        
+	 <div class="modal-dialog">
+		 <div class="modal-content">
+			 <div class="modal-header">
+				 <h4 class="modal-title">Add Item</h4>
+				 <button type="button" class="close" data-dismiss="modal">&times;</button>
+			 </div>
+			 <form action="" class="bs-example" enctype="multipart/form-data" method="post" accept-charset="utf-8">
+				 <div class="modal-body">
+					 <div class="form-group">
+						 <label>Item Name <span class="text-danger">*</span></label>
+						 <input type="text" name="category_name" class="form-control" required>
+					 </div>
+					 <div class="form-group">
+						 <label>Unit Price <span class="text-danger">*</span></label>
+						 <input type="text" name="category_name" class="form-control" required>
+					 </div>
+					 <div class="form-group">
+						 <label>Quantity <span class="text-danger">*</span></label>
+						 <input type="text" name="category_name" class="form-control" required>
+					 </div>
+					 <div class="submit-section">
+						 <button class="btn btn-primary submit-btn">Submit</button>
+					 </div>
+				 </div>
+			 </form>
+		 </div>
+	 </div>
+ </div>
+				<!--main content end-->
+
+
+			</div>
+
+	</div>
+    <script src="../assets/js/jquery-3.2.1.min.js"></script>	
+    <script src="../assets/js/jquery-ui.min.js"></script>
+    <script src="../assets/js/bootstrap.min.js"></script>
+    <script src="../assets/js/app.js"></script>
+    <script src="../assets/js/jquery.maskMoney.min.js"></script>
+</body>
+
+</html>
